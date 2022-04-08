@@ -16,7 +16,7 @@ API Link - https://www.themoviedb.org/documentation/api
 
 API Overview - https://developers.themoviedb.org/3/getting-started/introduction
 
-Useage Examples - https://www.themoviedb.org/documentation/api/discover
+Usage Examples - https://www.themoviedb.org/documentation/api/discover
 
 
 
