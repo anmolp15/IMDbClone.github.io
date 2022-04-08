@@ -32,6 +32,9 @@ function apiRequestCall(url){
         var convertedJson = JSON.parse(res);
         populateMoviePage(convertedJson);
     }
+    xhr.onerror = function() {
+        window.alert('Cannot get')
+    }
 }
 
 // this function will receive json of the movie as parameter and this will be used to populate the html elements dynamically for different movies
@@ -50,7 +53,7 @@ function populateMoviePage(myJson) {
     var ytURL;
     if (finalMovieTrailerArray.length == 0) {
         if (myJson.videos.results.length == 0) {
-            ytURL = '#';
+            ytURL = '';
         }
         else{
             ytURL = `https://www.youtube.com/embed/${myJson.videos.results[0].key}`;

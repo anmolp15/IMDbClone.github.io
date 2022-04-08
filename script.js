@@ -91,7 +91,15 @@ function createMovieElement(movie){
 // populating movies according to button clicked
 rRatedMoviesBtn.addEventListener('click', function(){
     pageHeading.innerHTML = 'Top R Rated Movies';
-    apiRequestCall(TMDB_BASE_URL+TMDB_BEST_R_RATED+TMDB_API_KEY);
+
+    //testing for error
+    try{
+        apiRequestCall(TMDB_BASE_URL+TMDB_BEST_R_RATED+TMDB_API_KEY);
+    }
+    catch{
+        window.alert("error");
+    }
+    
 });
 
 kidsMoviesBtn.addEventListener('click', function(){
@@ -247,5 +255,8 @@ searchInput.addEventListener('keyup', function() {
     var urlForThisInput = `https://api.themoviedb.org/3/search/movie?query=${searchedInput}&${TMDB_API_KEY}`;
     if (searchedInput.length != 0) {
         apiRequestCall(urlForThisInput);
+    }
+    else {
+        window.location.reload();
     }
 });
