@@ -60,18 +60,22 @@ function renderListItems(jsonResp, id){
 
 // clear localStorage i.e. deleting complete list
 document.getElementById('clear-whole-list').addEventListener('click', function() {
-    localStorage.clear();
-    window.location.reload();
+    if (window.confirm('Clear Whole List?')) {
+        localStorage.clear();
+        window.location.reload();
+    }
 });
 
 
 
 //delete a specific movie from list
 async function deleteItemFromList(id) {
-    console.log(id);
-    var tempArr = await JSON.parse(localStorage.getItem('MovieArray'));
-    var index = await tempArr.indexOf(id.toString());
-    await tempArr.splice(index,1);
-    await localStorage.setItem('MovieArray', JSON.stringify(tempArr));
-    await window.location.reload();
+    if (window.confirm('Delete Movie from List?')) {
+        console.log(id);
+        var tempArr = await JSON.parse(localStorage.getItem('MovieArray'));
+        var index = await tempArr.indexOf(id.toString());
+        await tempArr.splice(index,1);
+        await localStorage.setItem('MovieArray', JSON.stringify(tempArr));
+        await window.location.reload();
+    }
 }
