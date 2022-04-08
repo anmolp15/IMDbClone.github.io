@@ -15,7 +15,7 @@ const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 // fetching all the dom elements
 var movieContainer = document.getElementById('movie-container');
-var rRatedMoviesBtn = document.getElementById('top-r-rated');
+// var rRatedMoviesBtn = document.getElementById('top-r-rated');
 var kidsMoviesBtn = document.getElementById('top-kids-rated');
 var webLogo = document.getElementById('logo');
 var bestMoviesOfYearDropDownMenu = document.getElementById('best-of-year');
@@ -89,19 +89,19 @@ function createMovieElement(movie){
 //each movie element image is an <a> tag which will redirect to movie page with movie name and its rating as query string. This passed data will then be used to fetch individual movie details from OMDB Api and display them. rading is passed specifically to avoid mis match issues
 
 // populating movies according to button clicked
-rRatedMoviesBtn.addEventListener('click', function(){
-    window.alert('This request has been blocked; the content must be served over HTTPS. API Not Secure');
-    // pageHeading.innerHTML = 'Top R Rated Movies';
+// rRatedMoviesBtn.addEventListener('click', function(){
+//     window.alert('This request has been blocked; the content must be served over HTTPS. API Not Secure');
+//     // pageHeading.innerHTML = 'Top R Rated Movies';
 
-    // //testing for error
-    // try{
-    //     apiRequestCall(TMDB_BASE_URL+TMDB_BEST_R_RATED+TMDB_API_KEY);
-    // }
-    // catch(err){
-    //     window.alert(err);
-    // }
+//     // //testing for error
+//     // try{
+//     //     apiRequestCall(TMDB_BASE_URL+TMDB_BEST_R_RATED+TMDB_API_KEY);
+//     // }
+//     // catch(err){
+//     //     window.alert(err);
+//     // }
     
-});
+// });
 
 kidsMoviesBtn.addEventListener('click', function(){
     pageHeading.innerHTML = 'Popular In Kids';

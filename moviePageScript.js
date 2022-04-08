@@ -118,8 +118,18 @@ function populateMoviePage(myJson) {
 
     // on clicking x, we will change display back to none to hide it
     document.getElementById('remove-video-player').addEventListener('click', function (){
+        // make the div invisible but stop video before
+        stopThis();
         trailerVideoDiv.style.display = 'none';
     });
+
+    // this function will stop playing video
+    function stopThis(){
+        var iframe = document.getElementsByTagName("iframe")[0];
+        var url = iframe.getAttribute('src');
+        iframe.setAttribute('src', '');
+        iframe.setAttribute('src', url);
+    }
 }
 
 
