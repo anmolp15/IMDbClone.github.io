@@ -90,15 +90,16 @@ function createMovieElement(movie){
 
 // populating movies according to button clicked
 rRatedMoviesBtn.addEventListener('click', function(){
-    pageHeading.innerHTML = 'Top R Rated Movies';
+    window.alert('This request has been blocked; the content must be served over HTTPS. API Not Secure');
+    // pageHeading.innerHTML = 'Top R Rated Movies';
 
-    //testing for error
-    try{
-        apiRequestCall(TMDB_BASE_URL+TMDB_BEST_R_RATED+TMDB_API_KEY);
-    }
-    catch{
-        window.alert("error");
-    }
+    // //testing for error
+    // try{
+    //     apiRequestCall(TMDB_BASE_URL+TMDB_BEST_R_RATED+TMDB_API_KEY);
+    // }
+    // catch(err){
+    //     window.alert(err);
+    // }
     
 });
 
