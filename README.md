@@ -1,13 +1,12 @@
 # IMDbClone.github.io
 
-This is a comple Front-end based Project trying to replicate IMDb website.
-This project uses the TMDB Api providing access to a huge database of Movies and their details.
+This is a complete Front-end based Project trying to replicate IMDb website. This project uses the TMDB API providing access to a huge database of Movies and their details.
 
-Website has 3 pages
-1. Homepage - Displays all recent and popular movies with a few options to play around.
-2. Movie Page - Displays details of a specific(selected by user) movie with a button to play trailer of the movie there itself.
-3. My List Page - User can add movies to their favourit list. Those movies will be displayed here.
+The website has 3 pages
 
+1. Homepage - Displays all recent and popular movies with a few options to play around with.
+2. Movie Page - Displays details of a specific(selected by the user) movie with a button to play the trailer of the movie there itself.
+3. My List Page - User can add movies to their favourite list. Those movies will be displayed here.
 
 
 ## API Reference
@@ -38,9 +37,11 @@ Usage Examples - https://www.themoviedb.org/documentation/api/discover
  
 ## Features
 
-- filter movies based of a wide options of years, movies for kids
+- Filter movies based of a wide options of years, movies for kids
 - A huge dataset of Movies to search from
 - Search bar directly displays rendered movie elements on homepage
 - Watch Movie trailer directly on Movie's Page
 - Add any movie to List which persists browser closing/re-openning 
+
+Webpages are not mobile frieldly yet!
  
