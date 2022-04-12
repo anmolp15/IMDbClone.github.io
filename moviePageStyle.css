@@ -151,6 +151,9 @@ button{
     .movie-poster{
         height: 80%;
     }
+    .title{
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
