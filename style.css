@@ -26,7 +26,7 @@ body{
 #logo img{
     width: 100%;
     height: 100%;
-    min-width: 250px;
+    min-width: 150px;
     cursor: pointer;
 }
 
@@ -222,4 +222,49 @@ body{
     margin: 10px;
     border-radius: 10px;
     text-align: end;
+}
+
+
+/* responsiveness and media queries */
+@media screen and (max-width:950px) {
+    #logo{
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #header{
+        flex-direction: column;
+    }
+    #page-heading{
+        padding-top: 120px;
+    }
+    #extra-buttons{
+        margin: 10px;
+    }
+    #search-bar{
+        margin: 10px;
+    }
+    #back-to-home{
+        top: 15px;
+        left: 15px;
+        margin: 0;
+    }
+}
+@media screen and (max-width:700px) {
+    #page-heading{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width:550px) {
+    #page-heading{
+        font-size: 4.5rem;
+        padding-top: 140px;
+    }
+}
+@media screen and (max-width:350px) {
+    #page-heading{
+        padding-top: 140px;
+    }
 }

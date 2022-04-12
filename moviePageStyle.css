@@ -174,6 +174,10 @@ button{
     .each-movie-page{
         padding-top: 100px;
     }
+    iframe{
+        width: 451.5px;
+        height: 254px;
+    }
 }
 
 @media screen and (max-width: 530px) {
@@ -187,6 +191,10 @@ button{
     }
     .movie-poster{
         height: 60%;
+    }
+    iframe{
+        width: 400px;
+        height: 225px;
     }
 }
 
@@ -202,5 +210,16 @@ button{
     }
     .movie-poster{
         height: 50%;
+    }
+    iframe{
+        width: 355.5px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    iframe{
+        width: 300px;
+        height: 168.75x;
     }
 }
