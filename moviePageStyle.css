@@ -18,17 +18,22 @@ body{
     height: 100vh;
 }
 .each-movie-page{
+    height: inherit;
+    width: inherit;
     display: flex;
     align-items: center;
 }
 .movie-poster{
     margin: 0px 20px;
-    height: 750px;
-    min-width: 500px;
+    /* height: 750px; */
+    height: 90%;
+    /* min-width: 500px; */
 }
 .movie-poster img{
+    /* height: 100%;
+    width: 100%; */
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 .plot{
     max-height: 150px;
@@ -104,4 +109,88 @@ button{
 #return-to-home:hover{
     color: grey;
     font-size: 1.4rem;
+}
+
+
+
+
+/* responsiveness and media queries */
+@media screen and (max-width: 1620px) {
+    #movie-display{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #movie-display{
+        width: 95vw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .movie-poster{
+        height: 85%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #movie-display{
+        margin: auto;
+    }
+    .each-movie-page{
+        display: flex;
+        flex-direction: column;
+    }
+    .movie-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .plot{
+        text-align: justify;
+    }
+    .movie-poster{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .movie-details > *{
+        font-size: 1.2rem;
+        margin: 15px 10px;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .movie-poster{
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    .movie-details > *{
+        font-size: 1.2rem;
+        margin: 12px 10px;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .movie-poster{
+        height: 60%;
+    }
+}
+
+
+@media screen and (max-width: 470px) {
+    
+    .movie-details > *{
+        font-size: 1.2rem;
+        margin: 10px 10px;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .movie-poster{
+        height: 50%;
+    }
 }
