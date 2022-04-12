@@ -168,8 +168,11 @@ button{
         height: 65%;
     }
     #return-to-home{
-        top: 0;
-        right: 0;
+        top: 10px;
+        right: 10px;
+    }
+    .each-movie-page{
+        padding-top: 100px;
     }
 }
 
