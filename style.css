@@ -254,7 +254,7 @@ body{
         flex-direction: column;
     }
     #page-heading{
-        padding-top: 120px;
+        padding-top: 140px;
     }
     #extra-buttons{
         margin: 10px;
@@ -282,8 +282,8 @@ body{
         flex-direction: column;
     }
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:380px) {
     #page-heading{
-        padding-top: 140px;
+        padding-top: 150px;
     }
 }
