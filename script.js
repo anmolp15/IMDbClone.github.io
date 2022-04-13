@@ -26,6 +26,10 @@ var searchInput = document.getElementById('searchMovie');
 var wrapperDiv = document.querySelector('.wrapper');
 var resultsDiv = document.querySelector('.results');
 
+var prevBtn = document.getElementById('prev-page');
+var nextBtn = document.getElementById('next-page');
+let pageNo = 1;
+
 
 // populating best movies accoring to year dropdown using javascript
 for (let year = 2022; year>=2000; year--) {
@@ -260,4 +264,21 @@ searchInput.addEventListener('keyup', function() {
     else {
         window.location.reload();
     }
+});
+
+
+// navigate between pages
+nextBtn.addEventListener('click', () =>{
+    pageNo++;
+    let tempURL = `https://api.themoviedb.org/3/discover/movie?${TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNo}&with_watch_monetization_types=flatrate`;
+    apiRequestCall(tempURL);
+});
+
+prevBtn.addEventListener('click', () =>{
+    if (pageNo == 1) {
+        return;
+    }
+    pageNo--;
+    let tempURL = `https://api.themoviedb.org/3/discover/movie?${TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNo}&with_watch_monetization_types=flatrate`;
+    apiRequestCall(tempURL);
 });
