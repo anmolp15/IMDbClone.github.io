@@ -42,6 +42,5 @@ Usage Examples - https://www.themoviedb.org/documentation/api/discover
 - Search bar directly displays rendered movie elements on homepage
 - Watch Movie trailer directly on Movie's Page
 - Add any movie to List which persists browser closing/re-openning 
-
-Webpages are not mobile frieldly yet!
+- Completely responsive mobile friendly
  
