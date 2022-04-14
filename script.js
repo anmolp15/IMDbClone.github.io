@@ -267,11 +267,24 @@ searchInput.addEventListener('keyup', function() {
 });
 
 
+//disable prevrious page button initially and then based upon page no 
+prevBtn.disabled = true;
+function disablePvreBtn() {
+    if (pageNo == 1) {
+        prevBtn.disabled = true;
+    }
+    else{
+        prevBtn.disabled = false;
+    }
+}
+
+
 // navigate between pages
 nextBtn.addEventListener('click', () =>{
     pageNo++;
     let tempURL = `https://api.themoviedb.org/3/discover/movie?${TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNo}&with_watch_monetization_types=flatrate`;
     apiRequestCall(tempURL);
+    disablePvreBtn();
 });
 
 prevBtn.addEventListener('click', () =>{
@@ -281,4 +294,5 @@ prevBtn.addEventListener('click', () =>{
     pageNo--;
     let tempURL = `https://api.themoviedb.org/3/discover/movie?${TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNo}&with_watch_monetization_types=flatrate`;
     apiRequestCall(tempURL);
+    disablePvreBtn();
 });
