@@ -9,6 +9,9 @@ The website has 3 pages
 3. My List Page - User can add movies to their favourite list. Those movies will be displayed here.
 
 
+Check out here - https://anmolp15.github.io/IMDbClone.github.io/
+
+
 ## API Reference
 
 API Link - https://www.themoviedb.org/documentation/api
